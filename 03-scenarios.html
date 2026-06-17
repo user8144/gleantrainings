@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verifying and Deprecating Content — Overview</title>
+  <title>Verifying and Deprecating Content — Scenarios</title>
   <style>
 :root {
   --artifact-background: var(--theme-background, #ffffff);
@@ -213,64 +213,55 @@ hr.rule { border: 0; height: 1px; background: var(--artifact-border-light); marg
           <div style="font-weight:800; font-size:18px;">Verifying and Deprecating Content</div>
         </div>
       </div>
-      <div class="nav-links"><a href="index.html" aria-current='page'>Overview</a><a href="01-signals.html">Signals</a><a href="02-decisions.html">Decision guide</a><a href="03-scenarios.html">Scenarios</a><a href="04-stewardship.html">Stewardship</a><a href="05-apply-it.html">Apply it</a></div>
+      <div class="nav-links"><a href="index.html">Overview</a><a href="01-signals.html">Signals</a><a href="02-decisions.html">Decision guide</a><a href="03-scenarios.html" aria-current='page'>Scenarios</a><a href="04-stewardship.html">Stewardship</a><a href="05-apply-it.html">Apply it</a></div>
     </div>
     
 <section class="hero">
   <div class="panel">
-    <div class="kicker">Async module</div>
-    <h1>Verifying and deprecating content</h1>
-    <p class="lead">This module is for content owners, champions, and admins who help shape what people trust in Glean. The point is not to click features. It is to make better judgment calls about freshness, trust, and maintenance.</p>
-    <div class="meta-grid section">
-      <div class="card"><div class="label">Audience</div><div style="margin-top:8px;font-weight:700;">Content owners, champions, and admins</div></div>
-      <div class="card"><div class="label">Recommended length</div><div style="margin-top:8px;font-weight:700;">20–30 minutes</div></div>
-      <div class="card"><div class="label">What learners should leave with</div><div style="margin-top:8px;">A clean mental model for when to verify, when to deprecate, and when to leave content alone.</div></div>
-      <div class="card"><div class="label">Primary shift</div><div style="margin-top:8px;">Treat these actions as stewardship decisions, not ranking hacks.</div></div>
-    </div>
-    <div class="callout">Simple rule: verification elevates trust in something current. Deprecation suppresses trust in something stale. They solve different problems.</div>
+    <div class="kicker">Lesson 3</div>
+    <h1>Apply the model to real scenarios</h1>
+    <p class="lead">Use scenarios to practice the judgment call, not just memorize feature definitions.</p>
+    <div class="progress section"><span style="width:60%"></span></div>
   </div>
   <div class="panel">
-    <div class="label">Module map</div>
-    <div class="section choice-grid">
-      <a class="card-link" href="01-signals.html"><strong>1. Signals</strong><br><span class="small">What verify and deprecate actually communicate to users and ranking.</span></a>
-      <a class="card-link" href="02-decisions.html"><strong>2. Decision guide</strong><br><span class="small">When to verify, when to deprecate, when to do neither, and where Pin fits.</span></a>
-      <a class="card-link" href="03-scenarios.html"><strong>3. Scenarios</strong><br><span class="small">Three realistic situations and the lightest effective intervention.</span></a>
-      <a class="card-link" href="04-stewardship.html"><strong>4. Stewardship</strong><br><span class="small">Review cadence, ownership, and the maintenance obligations you create.</span></a>
-      <a class="card-link" href="05-apply-it.html"><strong>5. Apply it</strong><br><span class="small">A simple operating pattern for a healthier knowledge layer.</span></a>
-    </div>
+    <div class="label">How to use this page</div>
+    <p>Read the situation, decide the lightest effective intervention, then reveal the rationale.</p>
   </div>
 </section>
-<section class="section grid-2">
-  <div class="panel">
-    <h2>By the end of this asset, learners should be able to:</h2>
-    <ul class="clean">
-      <li>Explain what verification and deprecation signal to users and to ranking.</li>
-      <li>Know when to verify, when to deprecate, and when to do neither.</li>
-      <li>Understand the difference between trust elevation and stale-content suppression.</li>
-      <li>Recognize maintenance obligations created by these actions.</li>
-      <li>Use both actions as part of a healthier knowledge layer.</li>
-    </ul>
+<section class="section choice-grid">
+  <div class="choice">
+    <h3>Scenario 1: An old brand guide is still ranking</h3>
+    <p>The guide was once widely used, but marketing replaced it with a newer source. Employees still find the old file and use outdated language and assets.</p>
+    <button class="button interactive-only" onclick="toggleReveal('s1')">Reveal recommended action</button>
+    <div class="reveal" id="s1"><strong>Recommended action:</strong> Deprecate the old guide. Then make sure the current guide is discoverable, and verify it if it is the clear source of truth. If people search a very predictable query for the current guide, consider Pin only if that routing needs to be controlled tightly.</div>
   </div>
-  <div class="panel">
-    <h2>What this asset covers</h2>
-    <div class="grid-2">
-      <div class="card positive"><div class="label">Verify</div><div style="margin-top:8px;font-weight:700;">This is accurate and current.</div></div>
-      <div class="card negative"><div class="label">Deprecate</div><div style="margin-top:8px;font-weight:700;">This should not be relied on.</div></div>
-      <div class="card"><div class="label">Source-of-truth pattern</div><div style="margin-top:8px;">Verify + Pin can be a strong pattern when a query should route predictably to a trusted source.</div></div>
-      <div class="card"><div class="label">Stewardship</div><div style="margin-top:8px;">These actions create follow-through. They are not set-and-forget.</div></div>
-    </div>
+  <div class="choice">
+    <h3>Scenario 2: A current benefits page should clearly be trusted</h3>
+    <p>The People team has a current benefits page that is accurate, maintained, and intended to answer recurring employee questions. It matters when people are making real decisions.</p>
+    <button class="button interactive-only" onclick="toggleReveal('s2')">Reveal recommended action</button>
+    <div class="reveal" id="s2"><strong>Recommended action:</strong> Verify it. This is a classic trust-elevation case. If employees use a very predictable search such as a direct navigational query and you want the route to be deterministic, Verify + Pin can be appropriate.</div>
+  </div>
+  <div class="choice">
+    <h3>Scenario 3: A replaced process doc still confuses employees</h3>
+    <p>A team changed the process and published a replacement doc, but the older process page still appears in searches and continues to generate Slack questions.</p>
+    <button class="button interactive-only" onclick="toggleReveal('s3')">Reveal recommended action</button>
+    <div class="reveal" id="s3"><strong>Recommended action:</strong> Deprecate the old process doc. Confirm the replacement is accurate and visible. Verify the replacement if it is now the operational source of truth. The real fix is not just suppression; it is suppression plus a healthy replacement.</div>
   </div>
 </section>
 <section class="section panel">
-  <h2>How to use this module</h2>
+  <h2>What these scenarios teach</h2>
   <div class="grid-3">
-    <div class="card"><div class="label">If you are new to these levers</div><p>Go in order. The first two pages give you the judgment model.</p></div>
-    <div class="card"><div class="label">If you are working a live cleanup</div><p>Jump to Scenarios, then Stewardship, then use Apply it as your operating checklist.</p></div>
-    <div class="card"><div class="label">If you enable others</div><p>Use the decision language here consistently so people learn the difference between fixing trust and fixing clutter.</p></div>
+    <div class="card"><strong>Scenario 1</strong><p>The problem is stale competition. Suppress the wrong thing and strengthen the right thing only if it deserves stronger trust.</p></div>
+    <div class="card"><strong>Scenario 2</strong><p>The problem is confidence in a valid source. Elevate trust intentionally.</p></div>
+    <div class="card"><strong>Scenario 3</strong><p>The problem is not just that the old page exists. It is that the old page still competes with the current workflow.</p></div>
   </div>
 </section>
+<section class="section panel">
+  <h2>One more judgment rule</h2>
+  <div class="callout">Do not use verification as a shortcut for “important.” Do not use deprecation as a shortcut for “messy.” Use them only when the underlying content state justifies the signal.</div>
+</section>
 
-    <div class="footer-nav"><span></span><a class="button" href="01-signals.html">Signals →</a></div>
+    <div class="footer-nav"><a class="button" href="02-decisions.html">← Decision guide</a><a class="button" href="04-stewardship.html">Stewardship →</a></div>
   </main>
   <script>
 function toggleReveal(id) {
