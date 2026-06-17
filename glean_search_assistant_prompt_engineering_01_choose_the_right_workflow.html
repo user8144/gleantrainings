@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 1 Choose the Right Workflow</title>
+  <style>
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #172033;
+  --muted: #5f6c85;
+  --line: #d9e2f0;
+  --brand: #4f46e5;
+  --brand-2: #06b6d4;
+  --good: #e8f7ef;
+  --warn: #fff5df;
+  --bad: #fdecec;
+  --shadow: 0 10px 30px rgba(23,32,51,.08);
+  --radius: 18px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(180deg,#f8fbff 0%,#f4f6fb 100%); color: var(--text); }
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.shell { max-width: 1080px; margin: 0 auto; padding: 28px 20px 72px; }
+.hero { display: grid; gap: 18px; margin-bottom: 22px; }
+.hero-card, .panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.hero-card { padding: 28px; }
+.panel { padding: 22px; }
+.eyebrow { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--brand); }
+h1 { font-size: 40px; line-height: 1.05; margin: 10px 0 14px; }
+h2 { font-size: 28px; line-height: 1.15; margin: 6px 0 12px; }
+h3 { font-size: 18px; margin: 0 0 8px; }
+p { margin: 0 0 12px; line-height: 1.6; }
+.muted { color: var(--muted); }
+.kicker { display: inline-flex; gap: 8px; align-items: center; background: #eef4ff; border: 1px solid #dbe7ff; color: #2846b4; border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 16px; }
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.col-8 { grid-column: span 8; }
+.col-12 { grid-column: span 12; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; border-radius: 999px; padding: 6px 10px; margin-bottom: 10px; }
+.good { background: var(--good); color: #15633a; }
+.warn { background: var(--warn); color: #8a5a00; }
+.bad { background: var(--bad); color: #8d2f2f; }
+.list { display: grid; gap: 12px; }
+.item { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: #fbfcfe; }
+.item strong { display: block; margin-bottom: 6px; }
+.callout { border-left: 4px solid var(--brand); padding: 14px 16px; background: #f6f8ff; border-radius: 12px; }
+.nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 0 16px; border-radius: 12px; font-weight: 700; border: 1px solid var(--line); background: #fff; color: var(--text); text-decoration: none; }
+.btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: white; border: none; }
+.btn:hover { text-decoration: none; filter: brightness(.98); }
+.lesson-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.path { font-size: 14px; color: var(--muted); margin-bottom: 10px; }
+.stepper { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.step { border: 1px solid var(--line); background: white; color: var(--muted); border-radius: 999px; padding: 8px 12px; font-size: 13px; font-weight: 700; }
+.step.active { background: #eef4ff; color: #2846b4; border-color: #cfe0ff; }
+.practice { background: #fbfcff; border: 1px dashed #c8d5ea; border-radius: 14px; padding: 16px; }
+.quote { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; background: #0f172a; color: #e2e8f0; border-radius: 12px; padding: 14px; overflow-x: auto; }
+.footer-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 22px; }
+@media (max-width: 860px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  .col-4,.col-6,.col-8,.col-12 { grid-column: span 12; }
+  .lesson-grid { grid-template-columns: 1fr; }
+  .footer-nav { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+  <main class="shell">
+    
+    <div class="path"><a href="glean_search_assistant_prompt_engineering.html">Module home</a> / Lesson 1</div>
+    <div class="stepper">
+      <span class="step active">1. Choose the right workflow</span>
+      <span class="step">2. Prompt lab</span>
+      <span class="step">3. Cribl scenarios</span>
+      <span class="step">4. Trust habits</span>
+      <span class="step">5. Try this this week</span>
+    </div>
+    <section class="panel">
+      <div class="eyebrow">Lesson 1</div>
+      <h1>Choose the right workflow</h1>
+      <p class="muted">The best result usually comes from choosing the right starting move, not from writing a longer prompt.</p>
+    </section>
+    <section class="grid">
+      <div class="col-6">
+        <div class="panel">
+          <h2>Start with Search when…</h2>
+          <div class="list">
+            <div class="item"><strong>You need the actual doc, page, deck, or thread</strong> Retrieval is the job.</div>
+            <div class="item"><strong>You do not trust the first answer yet</strong> Find the source material before asking for synthesis.</div>
+            <div class="item"><strong>You are looking for the current source of truth</strong> This is especially important when docs may be old, duplicated, or inconsistent.</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="panel">
+          <h2>Start with Assistant when…</h2>
+          <div class="list">
+            <div class="item"><strong>You want synthesis across several sources</strong> Summaries, comparisons, and draft-first outputs fit here.</div>
+            <div class="item"><strong>You know the job to be done</strong> For example: compare, summarize, extract, draft, or outline.</div>
+            <div class="item"><strong>You still plan to sanity-check the answer</strong> Assistant helps you move faster, not skip judgment.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="panel">
+      <h2>The practical rule</h2>
+      <div class="callout">If the deliverable is the source itself, start in Search. If the deliverable is a synthesis of source material, start in Assistant. If Assistant seems off, narrow the source set or route back through Search.</div>
+    </section>
+    <section class="panel">
+      <h2>Quick practice</h2>
+      <div class="practice">
+        <p><strong>Task:</strong> You need the latest version of a team policy and want to send the exact link to a coworker.</p>
+        <p><strong>Best starting move:</strong> Search. The goal is the source, not a paraphrase.</p>
+      </div>
+      <div class="practice" style="margin-top:12px;">
+        <p><strong>Task:</strong> You need a concise summary of three internal docs before a meeting.</p>
+        <p><strong>Best starting move:</strong> Assistant, ideally with clear scope and source guidance.</p>
+      </div>
+    </section>
+    <div class="footer-nav">
+      <a class="btn" href="glean_search_assistant_prompt_engineering.html">Back to module home</a>
+      <a class="btn primary" href="glean_search_assistant_prompt_engineering_02_prompt_lab.html">Next lesson</a>
+    </div>
+    
+  </main>
+</body>
+</html>
