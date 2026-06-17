@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verifying and Deprecating Content — Overview</title>
+  <title>Verifying and Deprecating Content — Signals</title>
   <style>
 :root {
   --artifact-background: var(--theme-background, #ffffff);
@@ -213,64 +213,75 @@ hr.rule { border: 0; height: 1px; background: var(--artifact-border-light); marg
           <div style="font-weight:800; font-size:18px;">Verifying and Deprecating Content</div>
         </div>
       </div>
-      <div class="nav-links"><a href="index.html" aria-current='page'>Overview</a><a href="01-signals.html">Signals</a><a href="02-decisions.html">Decision guide</a><a href="03-scenarios.html">Scenarios</a><a href="04-stewardship.html">Stewardship</a><a href="05-apply-it.html">Apply it</a></div>
+      <div class="nav-links"><a href="index.html">Overview</a><a href="01-signals.html" aria-current='page'>Signals</a><a href="02-decisions.html">Decision guide</a><a href="03-scenarios.html">Scenarios</a><a href="04-stewardship.html">Stewardship</a><a href="05-apply-it.html">Apply it</a></div>
     </div>
     
 <section class="hero">
   <div class="panel">
-    <div class="kicker">Async module</div>
-    <h1>Verifying and deprecating content</h1>
-    <p class="lead">This module is for content owners, champions, and admins who help shape what people trust in Glean. The point is not to click features. It is to make better judgment calls about freshness, trust, and maintenance.</p>
-    <div class="meta-grid section">
-      <div class="card"><div class="label">Audience</div><div style="margin-top:8px;font-weight:700;">Content owners, champions, and admins</div></div>
-      <div class="card"><div class="label">Recommended length</div><div style="margin-top:8px;font-weight:700;">20–30 minutes</div></div>
-      <div class="card"><div class="label">What learners should leave with</div><div style="margin-top:8px;">A clean mental model for when to verify, when to deprecate, and when to leave content alone.</div></div>
-      <div class="card"><div class="label">Primary shift</div><div style="margin-top:8px;">Treat these actions as stewardship decisions, not ranking hacks.</div></div>
-    </div>
-    <div class="callout">Simple rule: verification elevates trust in something current. Deprecation suppresses trust in something stale. They solve different problems.</div>
+    <div class="kicker">Lesson 1</div>
+    <h1>What these actions signal</h1>
+    <p class="lead">Most confusion starts here. Verification and deprecation are not opposites in a simple toggle. They are two different signals applied for two different reasons.</p>
+    <div class="progress section"><span style="width:20%"></span></div>
   </div>
   <div class="panel">
-    <div class="label">Module map</div>
-    <div class="section choice-grid">
-      <a class="card-link" href="01-signals.html"><strong>1. Signals</strong><br><span class="small">What verify and deprecate actually communicate to users and ranking.</span></a>
-      <a class="card-link" href="02-decisions.html"><strong>2. Decision guide</strong><br><span class="small">When to verify, when to deprecate, when to do neither, and where Pin fits.</span></a>
-      <a class="card-link" href="03-scenarios.html"><strong>3. Scenarios</strong><br><span class="small">Three realistic situations and the lightest effective intervention.</span></a>
-      <a class="card-link" href="04-stewardship.html"><strong>4. Stewardship</strong><br><span class="small">Review cadence, ownership, and the maintenance obligations you create.</span></a>
-      <a class="card-link" href="05-apply-it.html"><strong>5. Apply it</strong><br><span class="small">A simple operating pattern for a healthier knowledge layer.</span></a>
+    <div class="label">Key distinction</div>
+    <div class="section grid-2">
+      <div class="card positive"><strong>Trust elevation</strong><p>Use verification to increase confidence in a current, accurate resource.</p></div>
+      <div class="card negative"><strong>Stale-content suppression</strong><p>Use deprecation to reduce reliance on content that should no longer guide behavior.</p></div>
     </div>
   </div>
 </section>
 <section class="section grid-2">
   <div class="panel">
-    <h2>By the end of this asset, learners should be able to:</h2>
-    <ul class="clean">
-      <li>Explain what verification and deprecation signal to users and to ranking.</li>
-      <li>Know when to verify, when to deprecate, and when to do neither.</li>
-      <li>Understand the difference between trust elevation and stale-content suppression.</li>
-      <li>Recognize maintenance obligations created by these actions.</li>
-      <li>Use both actions as part of a healthier knowledge layer.</li>
-    </ul>
+    <h2>Verify means</h2>
+    <div class="card positive">
+      <div class="value">This is accurate and current.</div>
+      <ul class="clean">
+        <li>The resource is a valid source people should trust.</li>
+        <li>You are comfortable increasing confidence in it.</li>
+        <li>You expect someone to maintain it over time.</li>
+      </ul>
+    </div>
   </div>
   <div class="panel">
-    <h2>What this asset covers</h2>
-    <div class="grid-2">
-      <div class="card positive"><div class="label">Verify</div><div style="margin-top:8px;font-weight:700;">This is accurate and current.</div></div>
-      <div class="card negative"><div class="label">Deprecate</div><div style="margin-top:8px;font-weight:700;">This should not be relied on.</div></div>
-      <div class="card"><div class="label">Source-of-truth pattern</div><div style="margin-top:8px;">Verify + Pin can be a strong pattern when a query should route predictably to a trusted source.</div></div>
-      <div class="card"><div class="label">Stewardship</div><div style="margin-top:8px;">These actions create follow-through. They are not set-and-forget.</div></div>
+    <h2>Deprecate means</h2>
+    <div class="card negative">
+      <div class="value">This should not be relied on.</div>
+      <ul class="clean">
+        <li>The resource is outdated, replaced, misleading, or no longer the right path.</li>
+        <li>You want to reduce the chance that it continues to confuse people.</li>
+        <li>You are intentionally suppressing trust, not deleting history.</li>
+      </ul>
     </div>
   </div>
 </section>
 <section class="section panel">
-  <h2>How to use this module</h2>
-  <div class="grid-3">
-    <div class="card"><div class="label">If you are new to these levers</div><p>Go in order. The first two pages give you the judgment model.</p></div>
-    <div class="card"><div class="label">If you are working a live cleanup</div><p>Jump to Scenarios, then Stewardship, then use Apply it as your operating checklist.</p></div>
-    <div class="card"><div class="label">If you enable others</div><p>Use the decision language here consistently so people learn the difference between fixing trust and fixing clutter.</p></div>
+  <h2>What users experience</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Action</th><th>Primary user signal</th><th>Main ranking effect</th><th>What it does not mean</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Verify</strong></td><td>This looks like a source I can trust.</td><td>Elevates trust and freshness signals around the resource.</td><td>It does not fix bad content. It only amplifies confidence in content that is already right.</td></tr>
+        <tr><td><strong>Deprecate</strong></td><td>This should not guide my behavior anymore.</td><td>Suppresses stale or misleading content from being over-relied on.</td><td>It does not create a new source of truth by itself. You still need the right replacement in place.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="section panel">
+  <h2>Quick self-check</h2>
+  <div class="choice-grid">
+    <div class="choice">
+      <h3>If I verify this, what am I saying?</h3>
+      <p>You are saying more than “this is important.” You are saying “this is accurate and current enough to earn stronger trust.”</p>
+    </div>
+    <div class="choice">
+      <h3>If I deprecate this, what am I saying?</h3>
+      <p>You are saying more than “I do not like this result.” You are saying “this should not continue competing as if it is current guidance.”</p>
+    </div>
   </div>
 </section>
 
-    <div class="footer-nav"><span></span><a class="button" href="01-signals.html">Signals →</a></div>
+    <div class="footer-nav"><a class="button" href="index.html">← Overview</a><a class="button" href="02-decisions.html">Decision guide →</a></div>
   </main>
   <script>
 function toggleReveal(id) {
